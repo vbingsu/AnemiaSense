@@ -15,11 +15,11 @@ export function LogoIcon({ size = 64, className = '' }: { size?: number; classNa
   )
 }
 
-export function Wordmark({ className = '' }: { className?: string }) {
+export function Wordmark({ className = '', onDark = false }: { className?: string; onDark?: boolean }) {
   return (
     <span className={className} style={{ fontWeight: 700, fontSize: '1.5rem' }}>
-      <span style={{ color: '#12306B' }}>Anemia</span>
-      <span style={{ color: '#F86858' }}>Sense</span>
+      <span style={{ color: onDark ? '#ffffff' : '#12306B' }}>Anemia</span>
+      <span style={{ color: onDark ? '#F8A594' : '#F86858' }}>Sense</span>
     </span>
   )
 }

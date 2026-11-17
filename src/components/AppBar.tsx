@@ -23,7 +23,7 @@ export function AppBar({ title, showBack, showClose, onBack, backPath, logoMode 
   return (
     <div style={{
       display: 'flex', alignItems: 'center', padding: '0 16px',
-      height: 56, background: '#12306B', flexShrink: 0,
+      height: 56, background: '#1D6FEB', flexShrink: 0,
       paddingTop: 'env(safe-area-inset-top, 0px)',
     }}>
       {(showBack || showClose) && (
@@ -39,7 +39,7 @@ export function AppBar({ title, showBack, showClose, onBack, backPath, logoMode 
       {logoMode ? (
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <LogoIcon size={28} />
-          <Wordmark />
+          <Wordmark onDark />
         </div>
       ) : (
         <span style={{ color: 'white', fontWeight: 700, fontSize: 17, flex: 1 }}>{title}</span>

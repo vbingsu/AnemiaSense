@@ -28,11 +28,11 @@ export default function StaffHome() {
           </div>
         )}
 
-        <h2 style={{ fontSize:20, fontWeight:700, color:'#12306B', margin:0 }}>{greeting()}</h2>
+        <h2 style={{ fontSize:20, fontWeight:700, color:'#1D6FEB', margin:0 }}>{greeting()}</h2>
 
         <div className="card" style={{ display:'flex', gap:16 }}>
           <div style={{ flex:1, textAlign:'center' }}>
-            <div style={{ fontSize:32, fontWeight:700, color:'#12306B' }}>{appState.screenedToday}</div>
+            <div style={{ fontSize:32, fontWeight:700, color:'#1D6FEB' }}>{appState.screenedToday}</div>
             <div style={{ fontSize:12, color:'#5A6275', marginTop:4 }}>Screened today</div>
           </div>
           <div style={{ width:1, background:'#D5DAEA' }} />
@@ -42,18 +42,18 @@ export default function StaffHome() {
           </div>
         </div>
 
-        <button onClick={() => navigate('/staff/pupils')} style={{ height:52, background:'#12306B', color:'white', border:'none', borderRadius:14, fontWeight:700, fontSize:15, cursor:'pointer' }}>
+        <button onClick={() => navigate('/staff/pupils')} style={{ height:52, background:'#1D6FEB', color:'white', border:'none', borderRadius:14, fontWeight:700, fontSize:15, cursor:'pointer' }}>
           Start screening
         </button>
 
         <div>
-          <div style={{ fontSize:13, fontWeight:700, color:'#12306B', marginBottom:8 }}>Recent screenings</div>
+          <div style={{ fontSize:13, fontWeight:700, color:'#1D6FEB', marginBottom:8 }}>Recent screenings</div>
           <div className="card" style={{ padding:0, overflow:'hidden' }}>
             {recent.length === 0 && <div style={{ padding:'24px 16px', textAlign:'center', color:'#5A6275', fontSize:13 }}>No screenings yet</div>}
             {recent.map((r, i) => (
               <div key={r.id} style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'12px 16px', borderBottom: i < recent.length-1 ? '1px solid #D5DAEA' : 'none' }}>
                 <div>
-                  <div style={{ fontSize:13, fontWeight:700, color:'#12306B' }}>{r.pupilId}</div>
+                  <div style={{ fontSize:13, fontWeight:700, color:'#1D6FEB' }}>{r.pupilId}</div>
                   <div style={{ fontSize:11, color:'#5A6275' }}>Grade {r.grade} · {new Date(r.time).toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' })}</div>
                 </div>
                 <RiskChip risk={r.risk} sm />
