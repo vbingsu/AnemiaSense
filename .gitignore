@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-apk/
+
+# Android build (keep source, exclude generated)
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+
+# Capacitor
+.cache/
+
+# Editor
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

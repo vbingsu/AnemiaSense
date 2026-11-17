@@ -1,0 +1,68 @@
+@import '@fontsource/nunito/400.css';
+@import '@fontsource/nunito/600.css';
+@import '@fontsource/nunito/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #12306B;
+  --coral: #F86858;
+  --white: #FFFFFF;
+  --lavender: #EEF1FB;
+  --blue: #1450A6;
+  --gray: #5A6275;
+  --border: #D5DAEA;
+  --risk-low-bg: #E3F5EC;
+  --risk-low-fg: #1F6B47;
+  --risk-possible-bg: #FFF1D6;
+  --risk-possible-fg: #8A5A00;
+  --risk-higher-bg: #FDE3DF;
+  --risk-higher-fg: #A6281B;
+  --st-pending-bg: #E7E9F0;
+  --st-pending-fg: #5A6275;
+  --st-referred-bg: #DCE8F8;
+  --st-referred-fg: #1450A6;
+  --st-confirmed-bg: #E1E5F7;
+  --st-confirmed-fg: #12306B;
+  --st-notconfirmed-bg: #E7E9F0;
+  --st-notconfirmed-fg: #5A6275;
+  --st-followedup-bg: #DFF1EE;
+  --st-followedup-fg: #1F6B5D;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: var(--lavender);
+}
+
+.h-dvh { height: 100dvh; }
+
+.safe-top { padding-top: env(safe-area-inset-top, 0px); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+.overflow-y-auto::-webkit-scrollbar { width: 0px; }
+
+.card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(18,48,107,0.08);
+  padding: 16px;
+}
+
+button:active { opacity: 0.82; }
